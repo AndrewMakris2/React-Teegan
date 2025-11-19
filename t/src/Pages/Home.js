@@ -8,19 +8,25 @@ import Quiz from '../Components/quiz.jsx'
 import Video from '../Components/video.jsx'
 import Recap from '../Components/recap.jsx'
 import Footer from '../Components/footer.jsx'
+import Month from '../Components/months.jsx'
+import Kiss from '../Music/Kiss.mp3'
 
 const Home = () => {
   return (
     <div >
+      <button className="music-btn" onClick={() => document.getElementById("bg-music").play()}>
+        🎵
+      </button>
+
+      <audio id="bg-music" src={Kiss} loop></audio>
+
+
       <div className="home">
           <h2>🩷 Andrew & Teegan 🩷</h2>
           <Quote id="quote"/>
       </div>
         <div className='months' id='months'>
-            <August/>
-            <September/>
-            <October/>
-            <November/>
+            <Month/>
         </div>
 
       <div id='quiz'>

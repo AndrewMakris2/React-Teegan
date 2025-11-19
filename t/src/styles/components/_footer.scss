@@ -1,0 +1,46 @@
+.footer{
+    background-color: black;
+    height: 20rem;
+    padding: 30px;
+    display: flex;
+    justify-content:space-evenly;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border-top: 2px solid hotpink;
+    margin-top: 5rem;
+    .TOC{
+        width: 30%;
+    }
+    h2{
+        color: white;
+        text-align: center;
+        line-height: 2rem;
+        font-family: Romantic;
+    }
+    li,a{
+        color: white;
+        text-align: center;
+        line-height: 2rem;
+        text-decoration: none;
+        font-family: Romantic;
+    }
+    hr{
+        border: 1px solid hotpink;
+    }
+    a:hover{
+        color: hotpink;
+        font-size: 1.2rem;
+        font-family: Romantic;
+    }
+    h4{
+        color: white;
+        text-align: center;
+        line-height: 2rem;
+        margin-top: 3rem;
+        font-family: song;
+    }
+    .quote2{
+        width: 40%;
+    }
+}

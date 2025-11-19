@@ -1,0 +1,33 @@
+.months{
+    .flex{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 2rem;
+    }
+    .month-card{
+        width: 48%;
+        img{
+            width: 25rem;
+            // aspect-ratio: 16 / 9;
+            height: 30rem;
+            border: white solid 2px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+        h3{
+            text-align: center;
+            margin-top: 1rem;
+            color: white;
+            font-family: Romantic;
+        }
+        p{
+            text-align: center;
+            margin-top: 1rem;
+            color: white;
+            line-height: 2rem;
+            
+        }
+    }
+}

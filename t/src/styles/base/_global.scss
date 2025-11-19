@@ -21,3 +21,22 @@ body {
   font-family: song;
   src: url('../Fonts/Romantic Song.ttf');
 }
+.music-btn {
+  background: #ff66cc;
+  border: none;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 50%;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #ff66cc;
+  transition: 0.3s;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
+
+.music-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #ff99dd;
+}

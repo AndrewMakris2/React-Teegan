@@ -151,8 +151,8 @@ const styles = {
     background: "#1d1d1dff",
     padding: "0rem",
     color: "white",
-    borderTop: "2px solid white",
-    borderBottom: "2px solid white",
+    borderTop: "2px solid hotpink",
+    borderBottom: "2px solid hotpink",
   },
   card: {
     background: "#000000ff",
@@ -161,6 +161,7 @@ const styles = {
     boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
     maxWidth: "500px",
     width: "100%",
+    border: ".5px solid hotpink",
   },
   optionButton: {
     width: "100%",
@@ -168,7 +169,7 @@ const styles = {
     padding: "0.75rem 1rem",
     marginBottom: "0.5rem",
     borderRadius: "8px",
-    border: "1px solid #000000ff",
+    border: "1px solid hotpink",
     background: "#fafafa",
     cursor: "pointer",
     fontSize: "0.95rem",
