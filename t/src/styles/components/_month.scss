@@ -1,0 +1,26 @@
+.months{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;   
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 4rem;
+    h2{
+        text-align: center;
+        color: white;
+        font-size: 3rem;
+        font-family: Romantic;
+    }
+    .aug{
+        width: 47%;
+    }
+    .sep{
+        width: 47%;
+    }
+    .oct{
+        width: 47%;
+    }
+    .nov{
+        width: 47%;
+    }
+}
