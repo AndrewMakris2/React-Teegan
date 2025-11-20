@@ -1,4 +1,4 @@
-.Recap{
+Recap{
     border-bottom: 2px solid hotpink;
     background-color: rgb(255, 255, 255);
     // margin-top: 2rem;
@@ -24,7 +24,6 @@
   height: 600px;
   width: 100%;
   box-sizing: border-box;
-  
 }
 
 .slideshow-title {
@@ -138,6 +137,7 @@
   transition: all 300ms;
   width: 100%;
   height: 22rem;
+  cursor: pointer;
 }
 
 .content-carrousel img:hover {
@@ -153,6 +153,7 @@
     transform: rotateY(360deg);
   }
 }
+
 .IMAGE_MOVIE {
   width: 250px;   /* or any size you want */
   height: 350px;
@@ -184,4 +185,99 @@
   border-radius: 0.75rem;
   background-color: black;
   opacity: 0.8;
+}
+
+/* 🔥 Modal overlay + popup for image text with fade-in + pink glow */
+
+.recap-modal-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  animation: recapOverlayFade 0.3s ease-out;
+}
+
+.recap-modal {
+  background-color: #000;
+  color: #fff;
+  border: 2px solid hotpink;
+  border-radius: 0.75rem;
+  padding: 2rem 3rem;
+  max-width: 700px;
+  width: 70%;
+  text-align: center;
+  font-family: Romantic;
+  box-shadow:
+    0 0 20px hotpink,
+    0 0 40px rgba(255, 105, 180, 0.6);
+  animation: recapModalFade 0.35s ease-out;
+}
+
+/* Heart icon in header */
+.recap-modal-heart {
+  color: hotpink;
+  margin-right: 0.5rem;
+  font-size: 1.8rem;
+  vertical-align: middle;
+}
+
+.recap-modal h3 {
+  color: white;
+  font-family: Romantic;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.recap-modal p {
+  color: white;
+  font-family: Romantic;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.recap-modal-close {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+  border: none;
+  background-color: hotpink;
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.recap-modal-close:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+/* ✨ Fade-in animations */
+
+@keyframes recapOverlayFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes recapModalFade {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }

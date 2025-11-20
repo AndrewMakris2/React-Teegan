@@ -1,9 +1,5 @@
 import React from 'react'
 import Quote from '../Components/quote.jsx'
-import August from '../Components/august.jsx'
-import September from '../Components/september.jsx'
-import October from '../Components/october.jsx'
-import November from '../Components/november.jsx'
 import Quiz from '../Components/quiz.jsx'
 import Video from '../Components/video.jsx'
 import Recap from '../Components/recap.jsx'
@@ -22,8 +18,8 @@ const Home = () => {
 
 
       <div className="home">
-          <h2>🩷 Andrew & Teegan 🩷</h2>
-          <Quote id="quote"/>
+          <h2 id='quote'>🩷 Andrew & Teegan 🩷</h2>
+          <Quote/>
       </div>
         <div className='months' id='months'>
             <Month/>

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 *,
 *::after,
@@ -272,33 +273,119 @@ body {
   width: 47%;
 }
 
-.Video {
-  border-bottom: 2px solid hotpink;
-  padding: 100px;
+.future-plans {
+  width: 100%;
+  padding: 4rem 1.5rem;
+  background: radial-gradient(circle at top, #550037 0%, #000000 40%, #0b0b14 100%);
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+  border-bottom: hotpink 2px solid;
 }
-.Video h2 {
+.future-plans__inner {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.future-plans__header {
   text-align: center;
-  color: white;
-  margin-top: 2rem;
-  font-family: Romantic;
-  font-size: 3rem;
+  margin-bottom: 2.5rem;
 }
-.Video iframe {
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  width: 50rem;
-  height: 30rem;
-  border-radius: 0.75rem;
-  border: hotpink 2px solid;
+.future-plans__title {
+  font-family: Romantic;
+  font-size: 2.8rem;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(255, 192, 203, 0.7);
+  margin-bottom: 0.75rem;
+}
+.future-plans__subtitle {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+.future-plans__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+@media (max-width: 900px) {
+  .future-plans__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 650px) {
+  .future-plans__grid {
+    grid-template-columns: 1fr;
+  }
+}
+.future-plans__footer {
+  text-align: center;
+  margin-top: 1rem;
+}
+.future-plans__quote {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.7;
+  padding: 1.25rem 1.75rem;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 192, 203, 0.7);
+  background: rgba(255, 192, 203, 0.06);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
 }
 
-.Recap {
+.future-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 18px;
+  padding: 1.5rem 1.75rem;
+  border: 1px solid rgba(255, 192, 203, 0.45);
+  box-shadow: 0 0 15px rgba(255, 182, 193, 0.4), 0 18px 30px rgba(0, 0, 0, 0.4);
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+.future-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px rgba(255, 182, 193, 0.8), 0 22px 40px rgba(0, 0, 0, 0.6);
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 105, 180, 0.9);
+}
+.future-card__title {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+.future-card__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.future-card__list li {
+  position: relative;
+  padding-left: 1.4rem;
+  margin-bottom: 0.55rem;
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+.future-card__list li::before {
+  content: "❤";
+  position: absolute;
+  left: 0;
+  top: 0.1rem;
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+Recap {
   border-bottom: 2px solid hotpink;
   background-color: rgb(255, 255, 255);
   padding: 20px;
 }
-.Recap h1 {
+Recap h1 {
   text-align: center;
   color: white;
   padding: 30px;
@@ -449,6 +536,7 @@ body {
   transition: all 300ms;
   width: 100%;
   height: 22rem;
+  cursor: pointer;
 }
 
 .content-carrousel img:hover {
@@ -500,6 +588,95 @@ body {
   opacity: 0.8;
 }
 
+/* 🔥 Modal overlay + popup for image text with fade-in + pink glow */
+.recap-modal-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  animation: recapOverlayFade 0.3s ease-out;
+}
+
+.recap-modal {
+  background-color: #000;
+  color: #fff;
+  border: 2px solid hotpink;
+  border-radius: 0.75rem;
+  padding: 2rem 3rem;
+  max-width: 700px;
+  width: 70%;
+  text-align: center;
+  font-family: Romantic;
+  box-shadow: 0 0 20px hotpink, 0 0 40px rgba(255, 105, 180, 0.6);
+  animation: recapModalFade 0.35s ease-out;
+}
+
+/* Heart icon in header */
+.recap-modal-heart {
+  color: hotpink;
+  margin-right: 0.5rem;
+  font-size: 1.8rem;
+  vertical-align: middle;
+}
+
+.recap-modal h3 {
+  color: white;
+  font-family: Romantic;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.recap-modal p {
+  color: white;
+  font-family: Romantic;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.recap-modal-close {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+  border: none;
+  background-color: hotpink;
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.recap-modal-close:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+/* ✨ Fade-in animations */
+@keyframes recapOverlayFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes recapModalFade {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 .footer {
   background-color: black;
   height: 20rem;
@@ -559,10 +736,13 @@ body {
 .months .month-card img {
   width: 25rem;
   height: 30rem;
-  border: white solid 2px;
+  border: hotpink solid 2px;
   margin-left: auto;
   margin-right: auto;
   display: block;
+  box-shadow: 0 0 25px rgba(255, 105, 180, 0.8), 0 22px 40px rgba(0, 0, 0, 0.6);
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 105, 180, 0.9);
 }
 .months .month-card h3 {
   text-align: center;

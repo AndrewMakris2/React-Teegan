@@ -104,7 +104,7 @@ function Quiz() {
 
   return (
     <div  style={styles.container}>
-      <h1>Quiz About Us 💞</h1>
+      <h1 style={{ textShadow: "0 0 10px rgba(255, 192, 203, 0.7)" }}>Quiz About Us 💞</h1>
       <div style={styles.card}>
         <h2>
           Question {currentQuestion + 1} of {questions.length}
@@ -148,11 +148,11 @@ const styles = {
     alignItems: "center",
     justifyContent: "center",
     fontFamily: "Romantic",
-    // background: "#1d1d1dff",
+    background: "radial-gradient(circle at bottom, #550037 0%, #000000 40%, #0b0b14 100%)",
     padding: "0rem",
     color: "white",
     borderTop: "2px solid hotpink",
-    borderBottom: "2px solid hotpink",
+    // borderBottom: "2px solid hotpink",
   },
   card: {
     background: "#000000ff",

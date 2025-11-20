@@ -10,7 +10,7 @@ const footer = () => {
           <li><a href="#quote">Quote</a></li>
           <li><a href="#months">Months</a></li>
           <li><a href="#quiz">Quiz</a></li>
-          <li><a href="#video">Video</a></li>
+          <li><a href="#video">Future Plans</a></li>
           <li><a href="#recap">Recap</a></li>
         </ul>
       </div>
