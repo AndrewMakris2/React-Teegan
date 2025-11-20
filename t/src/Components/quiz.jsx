@@ -103,7 +103,7 @@ function Quiz() {
   const question = questions[currentQuestion];
 
   return (
-    <div style={styles.container}>
+    <div  style={styles.container}>
       <h1>Quiz About Us 💞</h1>
       <div style={styles.card}>
         <h2>
@@ -148,7 +148,7 @@ const styles = {
     alignItems: "center",
     justifyContent: "center",
     fontFamily: "Romantic",
-    background: "#1d1d1dff",
+    // background: "#1d1d1dff",
     padding: "0rem",
     color: "white",
     borderTop: "2px solid hotpink",
