@@ -1,38 +1,81 @@
-.months{
-    .flex{
+.months {
+    .flex {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
         gap: 2rem;
     }
-    .month-card{
+
+    .month-card {
         width: 48%;
-        img{
-            width: 25rem;
-            // aspect-ratio: 16 / 9;
-            height: 30rem;
+
+        img {
+            width: 100%;
+            max-width:30rem;
+            height: auto;
+            aspect-ratio: 3 / 4;
             border: hotpink solid 2px;
             margin-left: auto;
             margin-right: auto;
             display: block;
             box-shadow:
-            0 0 25px rgba(255, 105, 180,.8),
-            0 22px 40px rgba(0, 0, 0, 0.6);
+                0 0 25px rgba(255, 105, 180, .8),
+                0 22px 40px rgba(0, 0, 0, 0.6);
             background: rgba(255, 255, 255, 0.09);
             border-color: rgba(255, 105, 180, 0.9);
+            border-radius: 1rem;
         }
-        h3{
+        img:hover{
+            box-shadow:
+                0 0 35px rgba(255, 105, 180, 1),
+                0 25px 50px rgba(0, 0, 0, 0.8);
+        }
+        h3 {
             text-align: center;
             margin-top: 1rem;
             color: white;
             font-family: Romantic;
         }
-        p{
+
+        p {
             text-align: center;
             margin-top: 1rem;
             color: white;
             line-height: 2rem;
-            
+        }
+    }
+
+    /* 📱 iPhones (small screens) */
+    @media (max-width: 600px) {
+        .month-card {
+            width: 100%;
+
+            img {
+                max-width: 18rem;
+                height: auto;
+            }
+        }
+    }
+
+    /* 📱 Large Phones & Small Tablets */
+    @media (min-width: 601px) and (max-width: 900px) {
+        .month-card {
+            width: 100%;
+
+            img {
+                max-width: 22rem;
+            }
+        }
+    }
+
+    /* 📱 Tablets (iPad portrait/landscape) */
+    @media (min-width: 901px) and (max-width: 1200px) {
+        .month-card {
+            width: 45%;
+
+            img {
+                max-width: 23rem;
+            }
         }
     }
 }

@@ -185,8 +185,7 @@ html {
 }
 
 body {
-  background-color: #000000;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23450045' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%2340003F'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+  background: linear-gradient(180deg, #0a0a0f 0%, #150012 40%, #000000 100%);
 }
 
 @font-face {
@@ -231,8 +230,10 @@ body {
   text-align: center;
   margin-top: 20px;
   color: white;
-  font-size: 5rem;
   font-family: Romantic;
+  font-size: clamp(2rem, 6vw, 5rem);
+  line-height: 1.1;
+  padding: 3rem;
 }
 
 .quote {
@@ -252,7 +253,7 @@ body {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  margin: 4rem;
+  margin: 2rem;
 }
 .months h2 {
   text-align: center;
@@ -276,11 +277,12 @@ body {
 .future-plans {
   width: 100%;
   padding: 4rem 1.5rem;
-  background: radial-gradient(circle at top, #550037 0%, #000000 40%, #0b0b14 100%);
+  background: linear-gradient(180deg, #0a0a0f 0%, #150012 40%, #000000 100%);
   display: flex;
   justify-content: center;
   color: #ffffff;
   border-bottom: hotpink 2px solid;
+  box-shadow: 0px -8px 20px rgba(255, 20, 147, 0.25);
 }
 .future-plans__inner {
   width: 100%;
@@ -382,8 +384,8 @@ body {
 
 Recap {
   border-bottom: 2px solid hotpink;
-  background-color: rgb(255, 255, 255);
-  padding: 20px;
+  background: linear-gradient(180deg, #0a0a0f 0%, #150012 40%, #000000 100%);
+  box-shadow: 0px -8px 20px rgba(255, 20, 147, 0.25);
 }
 Recap h1 {
   text-align: center;
@@ -527,15 +529,15 @@ Recap h1 {
 
 .shadow {
   position: absolute;
-  box-shadow: 0px 0px 20px 0px rgb(3, 0, 99);
-  border-radius: 1px;
+  border-radius: 0.75rem;
+  box-shadow: rgba(234, 0, 255, 0.2) 10px 17px 29px 10px;
 }
 
 .content-carrousel img {
   image-rendering: auto;
   transition: all 300ms;
   width: 100%;
-  height: 22rem;
+  height: 100%;
   cursor: pointer;
 }
 
@@ -679,18 +681,24 @@ Recap h1 {
 }
 .footer {
   background-color: black;
-  height: 20rem;
   padding: 30px;
   display: flex;
   justify-content: space-evenly;
+  align-items: flex-start;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
   border-top: 2px solid hotpink;
   margin-top: 5rem;
+  min-height: 20rem;
+  box-shadow: 0px -8px 20px rgba(255, 20, 147, 0.25);
+  background: linear-gradient(180deg, #0a0a0f 0%, #150012 40%, #000000 100%);
 }
 .footer .TOC {
   width: 30%;
+}
+.footer .quote2 {
+  width: 40%;
 }
 .footer h2 {
   color: white;
@@ -698,12 +706,14 @@ Recap h1 {
   line-height: 2rem;
   font-family: Romantic;
 }
-.footer li, .footer a {
+.footer li,
+.footer a {
   color: white;
   text-align: center;
   line-height: 2rem;
   text-decoration: none;
   font-family: Romantic;
+  list-style: none;
 }
 .footer hr {
   border: 1px solid hotpink;
@@ -720,10 +730,34 @@ Recap h1 {
   margin-top: 3rem;
   font-family: song;
 }
-.footer .quote2 {
-  width: 40%;
-}
 
+/* 📱 Mobile footer: stack vertically so nothing squishes or overlaps */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 24px 16px;
+    min-height: auto;
+    margin-top: 3rem;
+  }
+  .footer .TOC,
+  .footer .quote2 {
+    width: 100%;
+    max-width: 420px;
+  }
+  .footer h2,
+  .footer h4,
+  .footer li,
+  .footer a {
+    font-size: 0.95rem;
+  }
+}
+.months {
+  /* 📱 iPhones (small screens) */
+  /* 📱 Large Phones & Small Tablets */
+  /* 📱 Tablets (iPad portrait/landscape) */
+}
 .months .flex {
   display: flex;
   flex-wrap: wrap;
@@ -734,8 +768,10 @@ Recap h1 {
   width: 48%;
 }
 .months .month-card img {
-  width: 25rem;
-  height: 30rem;
+  width: 100%;
+  max-width: 30rem;
+  height: auto;
+  aspect-ratio: 3/4;
   border: hotpink solid 2px;
   margin-left: auto;
   margin-right: auto;
@@ -743,6 +779,10 @@ Recap h1 {
   box-shadow: 0 0 25px rgba(255, 105, 180, 0.8), 0 22px 40px rgba(0, 0, 0, 0.6);
   background: rgba(255, 255, 255, 0.09);
   border-color: rgba(255, 105, 180, 0.9);
+  border-radius: 1rem;
+}
+.months .month-card img:hover {
+  box-shadow: 0 0 35px rgb(255, 105, 180), 0 25px 50px rgba(0, 0, 0, 0.8);
 }
 .months .month-card h3 {
   text-align: center;
@@ -756,6 +796,31 @@ Recap h1 {
   color: white;
   line-height: 2rem;
 }
+@media (max-width: 600px) {
+  .months .month-card {
+    width: 100%;
+  }
+  .months .month-card img {
+    max-width: 18rem;
+    height: auto;
+  }
+}
+@media (min-width: 601px) and (max-width: 900px) {
+  .months .month-card {
+    width: 100%;
+  }
+  .months .month-card img {
+    max-width: 22rem;
+  }
+}
+@media (min-width: 901px) and (max-width: 1200px) {
+  .months .month-card {
+    width: 45%;
+  }
+  .months .month-card img {
+    max-width: 23rem;
+  }
+}
 
 .loading-overlay {
   position: fixed;
@@ -766,6 +831,8 @@ Recap h1 {
   justify-content: center;
   z-index: 9999;
   background-color: rgba(0, 0, 0, 0.6);
+  background: linear-gradient(180deg, #0a0a0f 0%, #150012 40%, #000000 100%);
+  box-shadow: rgba(255, 0, 213, 0.16) 0px 1px 4px;
 }
 
 .montage {
@@ -775,7 +842,7 @@ Recap h1 {
   overflow: hidden;
   border-radius: 20px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
-  border: hotpink 4px solid;
+  border: rgba(255, 105, 180, 0.298) 4px solid;
 }
 
 .montage-image {

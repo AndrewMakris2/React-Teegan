@@ -1,46 +1,85 @@
-.footer{
-    background-color: black;
-    height: 20rem;
-    padding: 30px;
-    display: flex;
-    justify-content:space-evenly;
+.footer {
+  background-color: black;
+  padding: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 2px solid hotpink;
+  margin-top: 5rem;
+  min-height: 20rem;  
+  box-shadow: 0px -8px 20px rgba(255, 20, 147, 0.25);
+  background: linear-gradient(180deg, #0a0a0f 0%, #150012 40%, #000000 100%);
+
+     // allow more if content needs it (no hard cap)
+
+  .TOC {
+    width: 30%;
+  }
+
+  .quote2 {
+    width: 40%;
+  }
+
+  h2 {
+    color: white;
+    text-align: center;
+    line-height: 2rem;
+    font-family: Romantic;
+  }
+
+  li,
+  a {
+    color: white;
+    text-align: center;
+    line-height: 2rem;
+    text-decoration: none;
+    font-family: Romantic;
+    list-style: none;
+  }
+
+  hr {
+    border: 1px solid hotpink;
+  }
+
+  a:hover {
+    color: hotpink;
+    font-size: 1.2rem;
+    font-family: Romantic;
+  }
+
+  h4 {
+    color: white;
+    text-align: center;
+    line-height: 2rem;
+    margin-top: 3rem;
+    font-family: song;
+  }
+}
+
+/* 📱 Mobile footer: stack vertically so nothing squishes or overlaps */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 24px 16px;
+    min-height: auto;      // just let content define size
+    margin-top: 3rem;
+  }
+
+  .footer .TOC,
+  .footer .quote2 {
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    border-top: 2px solid hotpink;
-    margin-top: 5rem;
-    .TOC{
-        width: 30%;
-    }
-    h2{
-        color: white;
-        text-align: center;
-        line-height: 2rem;
-        font-family: Romantic;
-    }
-    li,a{
-        color: white;
-        text-align: center;
-        line-height: 2rem;
-        text-decoration: none;
-        font-family: Romantic;
-    }
-    hr{
-        border: 1px solid hotpink;
-    }
-    a:hover{
-        color: hotpink;
-        font-size: 1.2rem;
-        font-family: Romantic;
-    }
-    h4{
-        color: white;
-        text-align: center;
-        line-height: 2rem;
-        margin-top: 3rem;
-        font-family: song;
-    }
-    .quote2{
-        width: 40%;
-    }
+    max-width: 420px;
+  }
+
+  .footer h2,
+  .footer h4,
+  .footer li,
+  .footer a {
+    font-size: 0.95rem;
+  }
 }

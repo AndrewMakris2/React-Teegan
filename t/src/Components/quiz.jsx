@@ -148,11 +148,13 @@ const styles = {
     alignItems: "center",
     justifyContent: "center",
     fontFamily: "Romantic",
-    background: "radial-gradient(circle at bottom, #550037 0%, #000000 40%, #0b0b14 100%)",
+    background: "linear-gradient(180deg, #0a0a0f 0%, #150012 40%, #000000 100%)",
     padding: "0rem",
     color: "white",
     borderTop: "2px solid hotpink",
-    // borderBottom: "2px solid hotpink",
+    borderBottom: "2px solid hotpink",
+    boxShadow: "0px -8px 20px rgba(255, 20, 147, 0.25)",
+
   },
   card: {
     background: "#000000ff",

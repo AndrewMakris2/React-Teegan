@@ -7,6 +7,9 @@
   justify-content: center;
   z-index: 9999;
   background-color: rgba(0, 0, 0, 0.6);
+    background: linear-gradient(180deg, #0a0a0f 0%, #150012 40%, #000000 100%);
+    box-shadow: rgba(255, 0, 213, 0.16) 0px 1px 4px;
+
 }
 
 .montage {
@@ -18,7 +21,7 @@
   overflow: hidden;
   border-radius: 20px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
-  border: hotpink 4px solid;
+  border: rgba(255, 105, 180, 0.298) 4px solid;
 }
 
 .montage-image {
