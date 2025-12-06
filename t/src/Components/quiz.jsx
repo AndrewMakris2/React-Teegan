@@ -112,7 +112,7 @@ function Quiz() {
         <p>{question.question}</p>
         <div>
           {question.options.map((option, index) => (
-            <button
+            <button 
               key={index}
               onClick={() => handleOptionClick(index)}
               style={{
@@ -131,6 +131,7 @@ function Quiz() {
           }}
           onClick={handleNext}
           disabled={selectedOption === null}
+          
         >
           {currentQuestion === questions.length - 1 ? "Finish" : "Next"}
         </button>
@@ -178,7 +179,8 @@ const styles = {
   },
   selectedOption: {
     borderColor: "#ff4b7a",
-    background: "#b9b9b9ff",
+    background: "#202020ff",
+    color: "white",
   },
   button: {
     marginTop: "1rem",
